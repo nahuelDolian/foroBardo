@@ -1,0 +1,55 @@
+import conductores.*
+import panelistas.*
+
+describe "prueba de conductores" {
+
+	test "Polino es polino" {
+		assert.equals(polino, polino)
+
+	}
+	test "fantino es fantino" {
+		assert.equals(fantino, fantino)
+	} 
+	test "fantino hace opinar a  pagani y el enojo se eleva a 10" {
+		fantino.haceOpinarDeDeportesA(horacioPagani)
+		assert.equals(10, horacioPagani.nivelDeEnojo())
+	
+	}
+	test "fantino hace opinar a  pasman y el enojo se eleva a 10" {
+		fantino.haceOpinarDeDeportesA(totiPasman)
+		assert.equals(10, totiPasman.nivelDeEnojo())
+	
+	}
+	test "fantino hace opinar a lizzy y el enojo se eleva a 10" {
+		fantino.haceOpinarDeDeportesA(lizzyTagliani)
+		assert.equals(10, lizzyTagliani.nivelDeEnojo())
+	
+	}
+	test "toti eleva la voz y tiene sed" {
+		totiPasman.elevarVoz()
+		assert.that(totiPasman.tieneSed)
+	}
+	test "pagani eleva la voz y su enojo es 10" {
+		horacioPagani.elevarVoz()
+		assert.equals(10, horacioPagani.nivelDeEnojo)
+	}
+	test "pagani toma agua y baja su enojo" {
+		horacioPagani.tomarAgua()
+		assert.equals(10, horacioPagani.nivelDeEnojo)
+	}
+	
+	test "pasman toma agua y no tiene sed" {
+		totiPasman.tomarAgua()
+		assert.that(totiPasman.tieneSed)
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}
